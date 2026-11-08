@@ -97,7 +97,7 @@ func apagarPedra(Pbody):
 	if d == false:
 		d = true
 		while true:
-			if Pbody.global_position.distance_to(player.global_position) <= 50.0:
+			if Pbody.global_position.distance_to(player.global_position) <= 80.0:
 				pedraAtual.queue_free()
 				pedraAtual = null
 				Atração = false

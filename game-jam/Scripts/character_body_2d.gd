@@ -22,9 +22,9 @@ func _physics_process(delta: float) -> void:
 
 	# Get the input direction and handle the movement/deceleration.
 	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction and not atrair:
+	if direction and not atrair and not dashing:
 		velocity.x = direction * SPEED
-	elif not dashing and not atrair:
+	elif not dashing and not atrair and not dashing:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	move_and_slide()
 
@@ -34,6 +34,7 @@ func atraindo(direc, b):
 
 func ativarDash(direc):
 	dashing = true
-	velocity = direc * 400
-	await get_tree().create_timer(0.5).timeout
+	if not is_on_floor():
+		velocity = direc * 400
+	await get_tree().create_timer(0.6).timeout
 	dashing = false
