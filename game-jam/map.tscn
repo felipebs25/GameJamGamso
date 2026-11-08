@@ -14,6 +14,8 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1370130134]
+position = Vector2(4.7683716e-07, -813)
+rotation = 1.5548358
 shape = SubResource("RectangleShape2D_e6lj2")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=17903387]
@@ -22,7 +24,18 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1437458983]
-position = Vector2(-14, -602)
+position = Vector2(-841, -227)
 shape = SubResource("RectangleShape2D_c7s6e")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2/CollisionShape2D" unique_id=1933051281]
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1310410217]
+position = Vector2(576, 637)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1516742163]
+position = Vector2(814, -226)
+shape = SubResource("RectangleShape2D_c7s6e")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3/CollisionShape2D" unique_id=2094425004]

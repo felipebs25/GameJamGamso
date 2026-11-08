@@ -15,6 +15,8 @@ var d = false
 
 func _process(delta: float) -> void:
 	if Atração:
+		if Input.is_action_pressed("M1"):
+			atrair()
 		if Input.is_action_pressed("M2"):
 			puxarPedra()
 	else:
@@ -34,6 +36,16 @@ func _input(event):
 		maxP = false
 		line_2d.clear_points()
 		Atração = true
+	elif Input.is_action_just_released("M1") and Atração:
+		player.atraindo(0, false)
+
+func atrair():
+	if not is_instance_valid(pedraAtual):
+		Atração = false
+		return
+	var direc = (pedraAtual.global_position - player.global_position).normalized()
+	if pedraAtual.global_position.distance_to(player.global_position) <= 200:
+		player.atraindo(direc, true)
 
 func trajetoria():
 	line_2d.clear_points()
