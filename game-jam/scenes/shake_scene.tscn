@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ctrgbiv65qi61"]
+
+[ext_resource type="Script" uid="uid://de15u1lvkrsjh" path="res://scenes/shake_scene.gd" id="1_55h2s"]
+
+[node name="ShakeScene" type="Node2D" unique_id=660201793]
+script = ExtResource("1_55h2s")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1688452760]
