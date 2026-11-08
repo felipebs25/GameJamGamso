@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://dm20hpg7ouw1e"]
 
-[ext_resource type="Script" uid="uid://bt2f45xd7wdss" path="res://Scripts/pedraBody.gd" id="1_3q7da"]
-[ext_resource type="Texture2D" uid="uid://c8ll6j3tw3jq7" path="res://New Piskel (1).png" id="1_o3i74"]
+[ext_resource type="Script" uid="uid://bt2f45xd7wdss" path="res://scripts/pedraBody.gd" id="1_3q7da"]
+[ext_resource type="Texture2D" uid="uid://c8ll6j3tw3jq7" path="res://assets/New Piskel (1).png" id="1_o3i74"]
+[ext_resource type="AudioStream" uid="uid://xbuvb0kr1qj1" path="res://sounds/magneto.mp3" id="3_il7dk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3q7da"]
 radius = 22.0
@@ -23,3 +24,6 @@ texture_filter = 3
 position = Vector2(9.500001, 9.500001)
 scale = Vector2(1.15625, 1.1562502)
 texture = ExtResource("1_o3i74")
+
+[node name="pedra" type="AudioStreamPlayer" parent="." unique_id=2017162757]
+stream = ExtResource("3_il7dk")

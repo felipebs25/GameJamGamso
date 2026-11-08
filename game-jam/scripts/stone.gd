@@ -2,6 +2,7 @@ extends Node2D
 class_name Stone
 @onready var stone: CharacterBody2D = $Stone
 @export var speed := 400.0
+@onready var pedra: AudioStreamPlayer = $pedra
 
 
 func _process(delta: float) -> void:
@@ -11,6 +12,7 @@ func _process(delta: float) -> void:
 
 
 func define_position(player):
+	pedra.play()
 	var tamanho_tela_vertical = get_viewport().get_visible_rect().size.y
 	var topo_da_tela = player.global_position.y - (tamanho_tela_vertical / 2.0)
 	var margem_seguranca = 100.0

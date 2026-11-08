@@ -4,7 +4,9 @@ const SPEED = 200.0
 const SPEED_VINE = 100.0
 const JUMP_VELOCITY = -350.0
 
+@onready var magneto: AudioStreamPlayer = $"../magneto"
 @onready var camera_2d: Camera2D = $Camera2D
+@onready var footstep: AudioStreamPlayer = $footstep
 
 
 var is_using_vine: bool = false
@@ -46,7 +48,11 @@ func _physics_process(delta: float) -> void:
 			velocity.x = horizontal_direction * SPEED
 		elif not dashing and not atrair:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
-
+	if is_on_floor() and not is_using_vine and horizontal_direction != 0:
+		if not footstep.playing:
+			footstep.play()
+	else:
+		footstep.stop()
 	move_and_slide()
 	
 func pular():
@@ -57,10 +63,12 @@ func gravidade(delta):
 	velocity += get_gravity() * delta
 
 func atraindo(direc, b):
+	magneto.play()
 	atrair = b
 	força_ima = direc if b else Vector2.ZERO
 
 func ativarDash(direc):
+	magneto.play()
 	dashing = true
 	if not is_on_floor():
 		velocity = direc * 400

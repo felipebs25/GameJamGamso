@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://n3b5tkdvnp1o" path="res://assets/icon.svg" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://3jmli7dmvtnu" path="res://scripts/character_body_2d.gd" id="1_onrkg"]
 [ext_resource type="Script" uid="uid://bwvwtmycl4fgt" path="res://scenes/camera_2d.gd" id="3_qhqgy"]
+[ext_resource type="AudioStream" uid="uid://b6o6w8ey5skfi" path="res://sounds/footstep.mp3" id="4_dqkch"]
+[ext_resource type="AudioStream" uid="uid://xbuvb0kr1qj1" path="res://sounds/magneto.mp3" id="5_qlg0r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
 size = Vector2(24, 26.5)
@@ -24,3 +26,10 @@ texture = ExtResource("1_4flbx")
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=313326655]
 position = Vector2(0, -1)
 script = ExtResource("3_qhqgy")
+
+[node name="footstep" type="AudioStreamPlayer" parent="CharacterBody2D" unique_id=150706649]
+stream = ExtResource("4_dqkch")
+volume_db = -3.735
+
+[node name="magneto" type="AudioStreamPlayer" parent="." unique_id=1625471979]
+stream = ExtResource("5_qlg0r")
