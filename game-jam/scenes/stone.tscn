@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cw0xqntes50ss"]
+
+[ext_resource type="Script" uid="uid://bd3yms382dy6" path="res://scripts/stone.gd" id="1_tuldt"]
+[ext_resource type="Texture2D" uid="uid://n3b5tkdvnp1o" path="res://assets/icon.svg" id="2_f651v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rot5g"]
+size = Vector2(57, 60)
+
+[node name="Stone_scene" type="Node2D" unique_id=692288630]
+script = ExtResource("1_tuldt")
+
+[node name="Stone" type="CharacterBody2D" parent="." unique_id=698568001]
+position = Vector2(30, -31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone" unique_id=2074167976]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone" unique_id=1266611812]
+position = Vector2(0, 7.6293945e-06)
+scale = Vector2(0.4453125, 0.46875)
+texture = ExtResource("2_f651v")

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dar4ubxmw8d6i"]
+
+[ext_resource type="Script" uid="uid://djqkne2ovanxs" path="res://scenes/menu.gd" id="1_vjb58"]
+[ext_resource type="AudioStream" uid="uid://dfr3ueh1u61ho" path="res://assets/menu.mp3" id="1_yqeox"]
+
+[node name="Menu" type="Control" unique_id=1180687197]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vjb58")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=854928730]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 648.0
+
+[node name="Button" type="Button" parent="." unique_id=788482575]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 407.0
+offset_right = 824.0
+offset_bottom = 521.0
+theme_override_font_sizes/font_size = 55
+text = "Jogar"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=65225255]
+stream = ExtResource("1_yqeox")
+autoplay = true
+attenuation = 1.6245048
