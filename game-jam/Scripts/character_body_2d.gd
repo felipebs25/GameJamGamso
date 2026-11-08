@@ -1,40 +1,51 @@
 extends CharacterBody2D
 
+const SPEED = 200.0
+const SPEED_VINE = 100.0
+const JUMP_VELOCITY = -350.0
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -500.0
-var dashing = false
-var atrair = false
-var força_ima = Vector2.ZERO
+@onready var camera_2d: Camera2D = $Camera2D
+
+
+var is_using_vine: bool = false
+var can_use_vine: bool = true
+
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-	if atrair:
-		velocity += força_ima * 1200 * delta
-		velocity -= get_gravity() * delta * 0.7
-		velocity = velocity.limit_length(600)
+	
+	for i in range(get_slide_collision_count()):
+		var collider := get_slide_collision(i).get_collider()
+		if collider and collider.name == "Stone":
+			camera_2d.add_trauma(0.3)
 
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_up") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+	var horizontal_direction := Input.get_axis("ui_left", "ui_right")
+	var vertical_direction := Input.get_axis("ui_up", "ui_down")
 
-	# Get the input direction and handle the movement/deceleration.
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction and not atrair and not dashing:
-		velocity.x = direction * SPEED
-	elif not dashing and not atrair and not dashing:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+	if is_using_vine:
+		velocity.x = 0
+		velocity.y = vertical_direction * SPEED_VINE
+		if Input.is_action_just_pressed("ui_space"):
+			is_using_vine = false
+			can_use_vine = false
+			pular()
+
+	else:
+		if not is_on_floor():
+			gravidade(delta)
+
+		if Input.is_action_just_pressed("ui_space") and is_on_floor():
+			pular()
+
+		if horizontal_direction:
+			velocity.x = horizontal_direction * SPEED
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
+
 	move_and_slide()
+	
+func pular():
+	velocity.y = JUMP_VELOCITY
 
-func atraindo(direc, b):
-		atrair = b
-		força_ima = direc if b else Vector2.ZERO
 
-func ativarDash(direc):
-	dashing = true
-	if not is_on_floor():
-		velocity = direc * 400
-	await get_tree().create_timer(0.6).timeout
-	dashing = false
+func gravidade(delta):
+	velocity += get_gravity() * delta
