@@ -4,7 +4,8 @@ extends Node
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var projectile_collision_mask = 1
 
-const Pedra = preload("res://pedra.tscn")
+const Pedra = preload("uid://dm20hpg7ouw1e")
+
 @onready var player = $"../Player/CharacterBody2D"
 @onready var map: Node2D = $"../Map"
 var carregar = 0

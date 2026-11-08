@@ -9,7 +9,9 @@ const JUMP_VELOCITY = -350.0
 
 var is_using_vine: bool = false
 var can_use_vine: bool = true
-
+var dashing = false
+var atrair = false
+var força_ima = Vector2.ZERO
 
 func _physics_process(delta: float) -> void:
 	
@@ -31,14 +33,18 @@ func _physics_process(delta: float) -> void:
 
 	else:
 		if not is_on_floor():
-			gravidade(delta)
+			velocity += get_gravity() * delta
+		if atrair:
+			velocity += força_ima * 1200 * delta
+			velocity -= get_gravity() * delta * 0.7
+			velocity = velocity.limit_length(600)
 
 		if Input.is_action_just_pressed("ui_space") and is_on_floor():
 			pular()
 
-		if horizontal_direction:
+		if horizontal_direction and not atrair and not dashing:
 			velocity.x = horizontal_direction * SPEED
-		else:
+		elif not dashing and not atrair:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
@@ -49,3 +55,14 @@ func pular():
 
 func gravidade(delta):
 	velocity += get_gravity() * delta
+
+func atraindo(direc, b):
+	atrair = b
+	força_ima = direc if b else Vector2.ZERO
+
+func ativarDash(direc):
+	dashing = true
+	if not is_on_floor():
+		velocity = direc * 400
+	await get_tree().create_timer(0.6).timeout
+	dashing = false
