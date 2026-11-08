@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://btccdt3mdjjyj"]
+
+[ext_resource type="Script" uid="uid://bg8ytg2ffasvs" path="res://Scripts/script_pedra.gd" id="1_vx4op"]
+
+[sub_resource type="Curve" id="Curve_qg26i"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.075, 0.84269667), 0.0, 0.0, 0, 0, Vector2(0.14, 0.1685394), 0.0, 0.0, 0, 0, Vector2(0.22500001, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[node name="ScriptPedra" type="Node" unique_id=454490009]
+script = ExtResource("1_vx4op")
+
+[node name="Line2D" type="Line2D" parent="." unique_id=356867437]
+width = 2.0
+width_curve = SubResource("Curve_qg26i")
+antialiased = true
