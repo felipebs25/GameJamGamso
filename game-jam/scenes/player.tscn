@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://c1fo2g8yx01c0"]
 
 [ext_resource type="Texture2D" uid="uid://n3b5tkdvnp1o" path="res://assets/icon.svg" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://csikr4awb1vyv" path="res://scripts/character_body_2d.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://3jmli7dmvtnu" path="res://scripts/character_body_2d.gd" id="1_onrkg"]
 [ext_resource type="Script" uid="uid://bwvwtmycl4fgt" path="res://scenes/camera_2d.gd" id="3_qhqgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
-size = Vector2(57, 60)
+size = Vector2(24, 26.5)
 
 [node name="Player" type="Node2D" unique_id=554540368]
 
@@ -13,12 +13,14 @@ size = Vector2(57, 60)
 script = ExtResource("1_onrkg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=892844468]
+position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_onrkg")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1499228830]
-position = Vector2(0, 7.6293945e-06)
-scale = Vector2(0.4453125, 0.46875)
+position = Vector2(-1.9073486e-06, -0.9999999)
+scale = Vector2(0.22460938, 0.23643094)
 texture = ExtResource("1_4flbx")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=313326655]
+position = Vector2(0, -1)
 script = ExtResource("3_qhqgy")
