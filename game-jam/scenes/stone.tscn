@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cw0xqntes50ss"]
 
 [ext_resource type="Script" uid="uid://bd3yms382dy6" path="res://scripts/stone.gd" id="1_tuldt"]
+[ext_resource type="AudioStream" uid="uid://bwko8cd28iuth" path="res://sounds/pedra.mp3" id="2_6niw0"]
 [ext_resource type="Texture2D" uid="uid://n3b5tkdvnp1o" path="res://assets/icon.svg" id="2_f651v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rot5g"]
@@ -8,6 +9,10 @@ size = Vector2(57, 60)
 
 [node name="Stone_scene" type="Node2D" unique_id=692288630]
 script = ExtResource("1_tuldt")
+
+[node name="pedra" type="AudioStreamPlayer" parent="." unique_id=729165089]
+stream = ExtResource("2_6niw0")
+volume_db = -4.09
 
 [node name="Stone" type="CharacterBody2D" parent="." unique_id=698568001]
 position = Vector2(30, -31)

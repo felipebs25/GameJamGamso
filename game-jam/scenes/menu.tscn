@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://djqkne2ovanxs" path="res://scenes/menu.gd" id="1_vjb58"]
 [ext_resource type="AudioStream" uid="uid://dfr3ueh1u61ho" path="res://assets/menu.mp3" id="1_yqeox"]
+[ext_resource type="AudioStream" uid="uid://hbhib7fp6wh0" path="res://sounds/iniciar.mp3" id="2_con2f"]
 
 [node name="Menu" type="Control" unique_id=1180687197]
 layout_mode = 3
@@ -11,6 +12,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vjb58")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1226934733]
+stream = ExtResource("2_con2f")
+volume_db = 6.89
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=854928730]
 layout_mode = 0

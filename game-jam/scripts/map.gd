@@ -1,13 +1,13 @@
 extends Node2D
 
-const VINE_HOLD_TIME := 1       
-const DROP_STEPS := 20  
-const SHAKE_STEPS := 2                
+const VINE_HOLD_TIME := 1
+const DROP_STEPS := 20
+const SHAKE_STEPS := 2
 const DROP_STEP_DELAY := 0.1
+const VINE_RESPAWN_TIME := 3.0   # segundos até a vinha voltar
 const VINE_START_POS := Vector2i(0, 4)
 
 @onready var vine_sound: AudioStreamPlayer = $vine
-
 @onready var tilemap: TileMapLayer = $TileMapLayer
 @onready var player: CharacterBody2D = $"../Player/CharacterBody2D"
 var stone_scene = preload("res://scenes/stone.tscn")
@@ -18,7 +18,7 @@ var is_dropping := false
 var current_vine_cell := Vector2i.ZERO
 
 func _process(delta: float) -> void:
-	var chance = randi_range(1, 100000 * delta)
+	var chance = randi_range(1, 500000 * delta)
 	if chance == 1:
 		drop_stone()
 	var tile_pos: Vector2i = tilemap.local_to_map(tilemap.to_local(player.global_position))
@@ -35,15 +35,15 @@ func _process(delta: float) -> void:
 
 	if player.can_use_vine:
 		player.is_using_vine = true
-		
+
 	if player.is_using_vine:
 		if not vine_sound.playing:
-				vine_sound.play()
+			vine_sound.play()
 
 	if not player.is_using_vine or is_dropping:
 		_reset_vine_timer()
 		return
-		
+
 	var vine_id = tile_data.get_custom_data("vine_id")
 	if vine_id != current_vine_id:
 		current_vine_id = vine_id
@@ -70,9 +70,22 @@ func drop_vine() -> void:
 	var atlas_coords := tilemap.get_cell_atlas_coords(start_pos)
 	var alternative := tilemap.get_cell_alternative_tile(start_pos)
 
+	# --- Guarda o estado original da vinha (todas as células que serão afetadas) ---
+	var saved_cells: Array = []
+	for i in range(DROP_STEPS + 1):
+		var pos := start_pos + Vector2i(0, i)
+		var src := tilemap.get_cell_source_id(pos)
+		if src != -1:
+			saved_cells.append({
+				"pos": pos,
+				"source": src,
+				"atlas": tilemap.get_cell_atlas_coords(pos),
+				"alt": tilemap.get_cell_alternative_tile(pos),
+			})
+
 	player.is_using_vine = false
 	player.can_use_vine = false
-	
+
 	for i in range(DROP_STEPS):
 		var from_pos := start_pos + Vector2i(0, i)
 		var to_pos := start_pos + Vector2i(0, i + 1)
@@ -85,6 +98,13 @@ func drop_vine() -> void:
 	_reset_vine_timer()
 	is_dropping = false
 
+	# --- Espera e regenera ---
+	await get_tree().create_timer(VINE_RESPAWN_TIME).timeout
+	_restore_vine(saved_cells)
+
+func _restore_vine(saved_cells: Array) -> void:
+	for cell in saved_cells:
+		tilemap.set_cell(cell["pos"], cell["source"], cell["atlas"], cell["alt"])
 
 func drop_stone():
 	var new_stone = stone_scene.instantiate()

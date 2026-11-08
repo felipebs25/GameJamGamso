@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c784x4senpyfq" path="res://scripts/map.gd" id="1_paxxb"]
 [ext_resource type="Texture2D" uid="uid://cg8xytk6kbfj4" path="res://assets/world_tileset.png" id="2_gldc4"]
-[ext_resource type="AudioStream" uid="uid://cc2swab0s8odo" path="res://scenes/vine.mp3" id="3_gldc4"]
+[ext_resource type="AudioStream" uid="uid://hupnii1y6huo" path="res://sounds/vine.mp3" id="3_gldc4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e6lj2"]
 size = Vector2(1152, 22)
