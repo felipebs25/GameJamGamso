@@ -7,7 +7,7 @@
 [node name="World" type="Node2D" unique_id=345580365]
 
 [node name="Player" parent="." unique_id=554540368 instance=ExtResource("1_rwgxs")]
-position = Vector2(292, -1466)
+position = Vector2(663, -1871)
 
 [node name="Map" parent="." unique_id=1681540019 instance=ExtResource("2_4wyf3")]
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c1fo2g8yx01c0"]
 
-[ext_resource type="Script" uid="uid://3jmli7dmvtnu" path="res://scripts/character_body_2d.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://3jmli7dmvtnu" path="res://Scripts/character_body_2d.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://cuxm36akggikt" path="res://assets/Andando.png" id="2_qlg0r"]
 [ext_resource type="Script" uid="uid://bwvwtmycl4fgt" path="res://scenes/camera_2d.gd" id="3_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://bdewttggstixr" path="res://assets/Idle.png" id="3_tuyoq"]
@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bvkslywlwwdrw" path="res://assets/Subindo.png" id="9_f1ej7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
-size = Vector2(57, 60)
+size = Vector2(27, 52)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
 atlas = ExtResource("2_qlg0r")
@@ -239,9 +239,11 @@ animations = [{
 script = ExtResource("1_onrkg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=892844468]
+position = Vector2(1.5, 1)
 shape = SubResource("RectangleShape2D_onrkg")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1946053182]
+texture_filter = 3
 position = Vector2(0.50000095, 0.50000095)
 scale = Vector2(1.78125, 1.8437499)
 sprite_frames = SubResource("SpriteFrames_f1ej7")
