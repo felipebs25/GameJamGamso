@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://dndee5tjrpfy8"]
 
-[ext_resource type="Script" uid="uid://c784x4senpyfq" path="res://Scripts/map.gd" id="1_paxxb"]
+[ext_resource type="Script" uid="uid://c784x4senpyfq" path="res://scripts/map.gd" id="1_paxxb"]
 [ext_resource type="Texture2D" uid="uid://cg8xytk6kbfj4" path="res://assets/world_tileset.png" id="2_gldc4"]
 [ext_resource type="Texture2D" uid="uid://cor26kiinka6r" path="res://Tile_pedra.png" id="3_2klcf"]
 [ext_resource type="AudioStream" uid="uid://hupnii1y6huo" path="res://sounds/vine.mp3" id="3_gldc4"]
