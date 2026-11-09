@@ -3,12 +3,32 @@
 [ext_resource type="PackedScene" uid="uid://c1fo2g8yx01c0" path="res://scenes/player.tscn" id="1_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://dndee5tjrpfy8" path="res://scenes/map.tscn" id="2_4wyf3"]
 [ext_resource type="PackedScene" uid="uid://btccdt3mdjjyj" path="res://Scripts/script_pedra.tscn" id="3_4wyf3"]
+[ext_resource type="PackedScene" uid="uid://bualfsmqblhkx" path="res://scenes/stone_region.tscn" id="4_k0juu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_71j4m"]
+size = Vector2(736.2262, 26.72937)
 
 [node name="World" type="Node2D" unique_id=345580365]
 
 [node name="Player" parent="." unique_id=554540368 instance=ExtResource("1_rwgxs")]
-position = Vector2(1025, -2929)
+position = Vector2(793, -3278)
 
 [node name="Map" parent="." unique_id=1681540019 instance=ExtResource("2_4wyf3")]
 
 [node name="ScriptPedra" parent="." unique_id=454490009 instance=ExtResource("3_4wyf3")]
+
+[node name="Stone_region" parent="." unique_id=692288630 instance=ExtResource("4_k0juu")]
+position = Vector2(624, -4885)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1766619987]
+position = Vector2(703, -3296)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1488765502]
+position = Vector2(454.5, -120)
+rotation = -3.1415925
+scale = Vector2(2.4381096, -2.391001)
+shape = SubResource("RectangleShape2D_71j4m")
+
+[connection signal="body_entered" from="Area2D" to="Stone_region" method="_on_area_2d_body_entered"]

@@ -8,6 +8,7 @@
 size = Vector2(57, 60)
 
 [node name="Stone_region" type="Node2D" unique_id=692288630]
+position = Vector2(61, 147)
 script = ExtResource("1_kiy2d")
 
 [node name="pedra" type="AudioStreamPlayer" parent="." unique_id=729165089]
@@ -15,7 +16,7 @@ stream = ExtResource("2_qo6oh")
 volume_db = -4.09
 
 [node name="Stone" type="CharacterBody2D" parent="." unique_id=698568001 groups=["stones"]]
-position = Vector2(118, -32)
+position = Vector2(364, -2159)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stone" unique_id=2074167976]
 shape = SubResource("RectangleShape2D_rot5g")
@@ -27,7 +28,7 @@ scale = Vector2(4.6875005, 4.934211)
 texture = ExtResource("3_q504x")
 
 [node name="Stone2" type="CharacterBody2D" parent="." unique_id=49433578 groups=["stones"]]
-position = Vector2(59, -117)
+position = Vector2(305, -2244)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stone2" unique_id=209938008]
 shape = SubResource("RectangleShape2D_rot5g")
@@ -39,7 +40,7 @@ scale = Vector2(4.6875005, 4.934211)
 texture = ExtResource("3_q504x")
 
 [node name="Stone3" type="CharacterBody2D" parent="." unique_id=1015042059 groups=["stones"]]
-position = Vector2(201, -113)
+position = Vector2(209, -268)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stone3" unique_id=338534591]
 shape = SubResource("RectangleShape2D_rot5g")
@@ -51,7 +52,7 @@ scale = Vector2(4.6875005, 4.934211)
 texture = ExtResource("3_q504x")
 
 [node name="Stone4" type="CharacterBody2D" parent="." unique_id=172587595 groups=["stones"]]
-position = Vector2(247, -32)
+position = Vector2(539, -634)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stone4" unique_id=606510978]
 shape = SubResource("RectangleShape2D_rot5g")
@@ -63,7 +64,7 @@ scale = Vector2(4.6875005, 4.934211)
 texture = ExtResource("3_q504x")
 
 [node name="Stone5" type="CharacterBody2D" parent="." unique_id=2125692553 groups=["stones"]]
-position = Vector2(362, -388)
+position = Vector2(359, -495)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stone5" unique_id=1191776871]
 shape = SubResource("RectangleShape2D_rot5g")
@@ -75,7 +76,7 @@ scale = Vector2(4.6875005, 4.934211)
 texture = ExtResource("3_q504x")
 
 [node name="Stone6" type="CharacterBody2D" parent="." unique_id=1103463085 groups=["stones"]]
-position = Vector2(572, -457)
+position = Vector2(681, -3928)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stone6" unique_id=1700395761]
 shape = SubResource("RectangleShape2D_rot5g")
@@ -87,7 +88,7 @@ scale = Vector2(4.6875005, 4.934211)
 texture = ExtResource("3_q504x")
 
 [node name="Stone7" type="CharacterBody2D" parent="." unique_id=970368087 groups=["stones"]]
-position = Vector2(475, -605)
+position = Vector2(505, -1965)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stone7" unique_id=1350416327]
 shape = SubResource("RectangleShape2D_rot5g")
@@ -99,7 +100,7 @@ scale = Vector2(4.6875005, 4.934211)
 texture = ExtResource("3_q504x")
 
 [node name="Stone8" type="CharacterBody2D" parent="." unique_id=149650710 groups=["stones"]]
-position = Vector2(1003, -474)
+position = Vector2(1083, -2319)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stone8" unique_id=370567207]
 shape = SubResource("RectangleShape2D_rot5g")
@@ -111,7 +112,7 @@ scale = Vector2(4.6875005, 4.934211)
 texture = ExtResource("3_q504x")
 
 [node name="Stone9" type="CharacterBody2D" parent="." unique_id=548521382 groups=["stones"]]
-position = Vector2(619, -103)
+position = Vector2(636, -195)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stone9" unique_id=1381214447]
 shape = SubResource("RectangleShape2D_rot5g")
@@ -123,7 +124,7 @@ scale = Vector2(4.6875005, 4.934211)
 texture = ExtResource("3_q504x")
 
 [node name="Stone10" type="CharacterBody2D" parent="." unique_id=81929182 groups=["stones"]]
-position = Vector2(807, -460)
+position = Vector2(916, -3931)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stone10" unique_id=1380996475]
 shape = SubResource("RectangleShape2D_rot5g")
@@ -148,7 +149,7 @@ scale = Vector2(4.6875005, 4.934211)
 texture = ExtResource("3_q504x")
 
 [node name="Stone12" type="CharacterBody2D" parent="." unique_id=515352145 groups=["stones"]]
-position = Vector2(909, -634)
+position = Vector2(1060, -3896)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stone12" unique_id=965820740]
 shape = SubResource("RectangleShape2D_rot5g")
@@ -160,7 +161,7 @@ scale = Vector2(4.6875005, 4.934211)
 texture = ExtResource("3_q504x")
 
 [node name="Stone13" type="CharacterBody2D" parent="." unique_id=774649927 groups=["stones"]]
-position = Vector2(206, -464)
+position = Vector2(314, -1821)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stone13" unique_id=1955413360]
 shape = SubResource("RectangleShape2D_rot5g")
@@ -172,7 +173,7 @@ scale = Vector2(4.6875005, 4.934211)
 texture = ExtResource("3_q504x")
 
 [node name="Stone14" type="CharacterBody2D" parent="." unique_id=1412631818 groups=["stones"]]
-position = Vector2(846, -27)
+position = Vector2(833, -457)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stone14" unique_id=497178176]
 shape = SubResource("RectangleShape2D_rot5g")
@@ -184,7 +185,7 @@ scale = Vector2(4.6875005, 4.934211)
 texture = ExtResource("3_q504x")
 
 [node name="Stone15" type="CharacterBody2D" parent="." unique_id=349550508 groups=["stones"]]
-position = Vector2(942, -851)
+position = Vector2(1065, -4118)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stone15" unique_id=1121940017]
 shape = SubResource("RectangleShape2D_rot5g")
@@ -196,7 +197,7 @@ scale = Vector2(4.6875005, 4.934211)
 texture = ExtResource("3_q504x")
 
 [node name="Stone16" type="CharacterBody2D" parent="." unique_id=1836421671 groups=["stones"]]
-position = Vector2(300, -668)
+position = Vector2(420, -4032)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stone16" unique_id=1088773196]
 shape = SubResource("RectangleShape2D_rot5g")
@@ -208,7 +209,7 @@ scale = Vector2(4.6875005, 4.934211)
 texture = ExtResource("3_q504x")
 
 [node name="Stone17" type="CharacterBody2D" parent="." unique_id=4274931 groups=["stones"]]
-position = Vector2(27, -463)
+position = Vector2(499, -2294)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stone17" unique_id=1188518651]
 shape = SubResource("RectangleShape2D_rot5g")
@@ -220,7 +221,7 @@ scale = Vector2(4.6875005, 4.934211)
 texture = ExtResource("3_q504x")
 
 [node name="Stone18" type="CharacterBody2D" parent="." unique_id=1648329965 groups=["stones"]]
-position = Vector2(252, -217)
+position = Vector2(260, -372)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stone18" unique_id=1890186330]
 shape = SubResource("RectangleShape2D_rot5g")
@@ -244,7 +245,7 @@ scale = Vector2(4.6875005, 4.934211)
 texture = ExtResource("3_q504x")
 
 [node name="Stone20" type="CharacterBody2D" parent="." unique_id=343887830 groups=["stones"]]
-position = Vector2(584, -213)
+position = Vector2(668, -2075)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stone20" unique_id=78725278]
 shape = SubResource("RectangleShape2D_rot5g")
@@ -256,7 +257,7 @@ scale = Vector2(4.6875005, 4.934211)
 texture = ExtResource("3_q504x")
 
 [node name="Stone21" type="CharacterBody2D" parent="." unique_id=170047391 groups=["stones"]]
-position = Vector2(1046, -62)
+position = Vector2(1033, -492)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stone21" unique_id=1189533587]
 shape = SubResource("RectangleShape2D_rot5g")
@@ -268,7 +269,7 @@ scale = Vector2(4.6875005, 4.934211)
 texture = ExtResource("3_q504x")
 
 [node name="Stone22" type="CharacterBody2D" parent="." unique_id=1370131976 groups=["stones"]]
-position = Vector2(801, -229)
+position = Vector2(864, -1920)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stone22" unique_id=1042243875]
 shape = SubResource("RectangleShape2D_rot5g")
@@ -280,7 +281,7 @@ scale = Vector2(4.6875005, 4.934211)
 texture = ExtResource("3_q504x")
 
 [node name="Stone23" type="CharacterBody2D" parent="." unique_id=1965066461 groups=["stones"]]
-position = Vector2(678, -250)
+position = Vector2(762, -2112)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stone23" unique_id=1665812309]
 shape = SubResource("RectangleShape2D_rot5g")
@@ -292,7 +293,7 @@ scale = Vector2(4.6875005, 4.934211)
 texture = ExtResource("3_q504x")
 
 [node name="Stone24" type="CharacterBody2D" parent="." unique_id=149514765 groups=["stones"]]
-position = Vector2(152, -639)
+position = Vector2(347, -3877)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stone24" unique_id=123821140]
 shape = SubResource("RectangleShape2D_rot5g")
@@ -304,7 +305,7 @@ scale = Vector2(4.6875005, 4.934211)
 texture = ExtResource("3_q504x")
 
 [node name="Stone25" type="CharacterBody2D" parent="." unique_id=1172610803 groups=["stones"]]
-position = Vector2(1032, -196)
+position = Vector2(1087, -2062)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stone25" unique_id=1777919626]
 shape = SubResource("RectangleShape2D_rot5g")
@@ -316,7 +317,7 @@ scale = Vector2(4.6875005, 4.934211)
 texture = ExtResource("3_q504x")
 
 [node name="Stone26" type="CharacterBody2D" parent="." unique_id=572843213 groups=["stones"]]
-position = Vector2(398, -912)
+position = Vector2(549, -4229)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stone26" unique_id=1728318752]
 shape = SubResource("RectangleShape2D_rot5g")
@@ -328,7 +329,7 @@ scale = Vector2(4.6875005, 4.934211)
 texture = ExtResource("3_q504x")
 
 [node name="Stone27" type="CharacterBody2D" parent="." unique_id=1440849639 groups=["stones"]]
-position = Vector2(910, -272)
+position = Vector2(965, -2138)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stone27" unique_id=661787333]
 shape = SubResource("RectangleShape2D_rot5g")
@@ -340,7 +341,7 @@ scale = Vector2(4.6875005, 4.934211)
 texture = ExtResource("3_q504x")
 
 [node name="Stone28" type="CharacterBody2D" parent="." unique_id=478751889 groups=["stones"]]
-position = Vector2(659, -608)
+position = Vector2(768, -4079)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stone28" unique_id=1031456191]
 shape = SubResource("RectangleShape2D_rot5g")
