@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dm20hpg7ouw1e"]
 
-[ext_resource type="Script" uid="uid://bt2f45xd7wdss" path="res://Scripts/pedraBody.gd" id="1_3q7da"]
+[ext_resource type="Script" uid="uid://bt2f45xd7wdss" path="res://scripts/pedraBody.gd" id="1_3q7da"]
 [ext_resource type="Texture2D" uid="uid://d3y1ub4dvd8ns" path="res://assets/Pedra.png" id="2_il7dk"]
 [ext_resource type="AudioStream" uid="uid://xbuvb0kr1qj1" path="res://sounds/magneto.mp3" id="3_il7dk"]
 

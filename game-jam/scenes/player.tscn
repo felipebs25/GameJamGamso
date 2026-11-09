@@ -198,7 +198,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dt7fs")
 }],
-"loop": true,
+"loop": false,
 "name": &"pegando_pedra",
 "speed": 5.0
 }, {
@@ -247,7 +247,7 @@ texture_filter = 3
 position = Vector2(0.50000095, 0.50000095)
 scale = Vector2(1.78125, 1.8437499)
 sprite_frames = SubResource("SpriteFrames_f1ej7")
-animation = &"descendo"
+animation = &"pegando_pedra"
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=313326655]
 script = ExtResource("3_qhqgy")

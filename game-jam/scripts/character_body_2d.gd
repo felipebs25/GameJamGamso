@@ -8,6 +8,9 @@ const JUMP_VELOCITY = -350.0
 @onready var magneto: AudioStreamPlayer = $"../magneto"
 @onready var camera_2d: Camera2D = $Camera2D
 @onready var footstep: AudioStreamPlayer = $footstep
+var pegando_pedra := false
+@onready var script_pedra: Node = $"../../ScriptPedra/CharacterBody2D"
+
 
 var is_using_vine: bool = false
 var can_use_vine: bool = true
@@ -20,8 +23,15 @@ func _ready() -> void:
 	sprite_2d.animation_finished.connect(_on_animation_finished)
 
 func _on_animation_finished() -> void:
-	if sprite_2d.animation == "pos_pulo":
-		aterrissando = false
+	match sprite_2d.animation:
+		"pos_pulo":
+			aterrissando = false
+		"pegando_pedra":
+			pegando_pedra = false
+
+func pegar_pedra() -> void:
+	pegando_pedra = true
+	sprite_2d.play("pegando_pedra")
 
 func _physics_process(delta: float) -> void:
 	for i in range(get_slide_collision_count()):
@@ -92,6 +102,8 @@ func tocar(nome: String) -> void:
 		sprite_2d.play(nome)
 
 func atualizar_animacao(horizontal_direction: float) -> void:
+	if pegando_pedra:
+		return
 	if horizontal_direction != 0:
 		sprite_2d.flip_h = horizontal_direction < 0
 

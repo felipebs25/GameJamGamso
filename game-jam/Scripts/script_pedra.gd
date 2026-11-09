@@ -14,12 +14,14 @@ var Atração = false
 var pedraAtual
 var d = false
 var cd = false
+
 func _process(delta: float) -> void:
 	if Atração:
 		if Input.is_action_pressed("M1"):
 			atrair()
 		if Input.is_action_pressed("M2"):
 			puxarPedra()
+			
 	else:
 		trajetoria()
 		if Input.is_action_pressed("M1"):
@@ -97,6 +99,7 @@ func puxarPedra():
 	player.ativarDash(direc)
 	pedraAtual.puxar(player)
 	apagarPedra(pedraAtual)
+	player.pegar_pedra()
 	
 	
 func apagarPedra(Pbody):
