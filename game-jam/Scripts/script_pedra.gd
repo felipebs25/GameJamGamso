@@ -13,7 +13,7 @@ var maxP = false
 var Atração = false
 var pedraAtual
 var d = false
-
+var cd = false
 func _process(delta: float) -> void:
 	if Atração:
 		if Input.is_action_pressed("M1"):
@@ -39,11 +39,14 @@ func _input(event):
 		Atração = true
 	elif Input.is_action_just_released("M1") and Atração:
 		player.atraindo(0, false)
+		await get_tree().create_timer(1).timeout
+		cd = false
 
 func atrair():
 	if not is_instance_valid(pedraAtual):
 		Atração = false
 		return
+	cd = true
 	var direc = (pedraAtual.global_position - player.global_position).normalized()
 	if pedraAtual.global_position.distance_to(player.global_position) <= 200:
 		player.atraindo(direc, true)
@@ -79,7 +82,7 @@ func jogarPedra(event, valor):
 	pedra.global_position = player.global_position
 	var Pbody = pedra.get_node("CharacterBody2D")
 	pedraAtual = Pbody
-	Pbody.direction = (event.position - pedra.global_position).normalized()
+	Pbody.direction = (player.get_global_mouse_position() - pedra.global_position).normalized()
 	var speed = float(valor) / 100 * 1000
 	Pbody.velocity = Pbody.direction * speed
 	
@@ -87,6 +90,8 @@ func jogarPedra(event, valor):
 func puxarPedra():
 	if not is_instance_valid(pedraAtual):
 		Atração = false
+		return
+	if cd == true:
 		return
 	var direc = (pedraAtual.global_position - player.global_position).normalized()
 	player.ativarDash(direc)
@@ -98,7 +103,7 @@ func apagarPedra(Pbody):
 	if d == false:
 		d = true
 		while true:
-			if Pbody.global_position.distance_to(player.global_position) <= 80.0:
+			if Pbody.global_position.distance_to(player.global_position) <= 90.0:
 				pedraAtual.queue_free()
 				pedraAtual = null
 				Atração = false

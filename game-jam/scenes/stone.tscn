@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cw0xqntes50ss"]
 
-[ext_resource type="Script" uid="uid://bd3yms382dy6" path="res://scripts/stone.gd" id="1_tuldt"]
+[ext_resource type="Script" uid="uid://bd3yms382dy6" path="res://Scripts/stone.gd" id="1_tuldt"]
 [ext_resource type="AudioStream" uid="uid://bwko8cd28iuth" path="res://sounds/pedra.mp3" id="2_6niw0"]
-[ext_resource type="Texture2D" uid="uid://n3b5tkdvnp1o" path="res://assets/icon.svg" id="2_f651v"]
+[ext_resource type="Texture2D" uid="uid://b0xvvp7kl4c8t" path="res://Cainda_Pedra.png" id="3_f651v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rot5g"]
 size = Vector2(57, 60)
@@ -21,6 +21,7 @@ position = Vector2(30, -31)
 shape = SubResource("RectangleShape2D_rot5g")
 
 [node name="Sprite2D" type="Sprite2D" parent="Stone" unique_id=1266611812]
-position = Vector2(0, 7.6293945e-06)
-scale = Vector2(0.4453125, 0.46875)
-texture = ExtResource("2_f651v")
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_f651v")

@@ -16,7 +16,7 @@ func _physics_process(delta: float) -> void:
 		velocity = direction * speed
 		move_and_slide()
 	else:
-		velocity.y += gravity * 0.7 *delta
+		velocity.y += gravity * 0.7 * delta
 		var collision = move_and_collide(velocity * delta)
 
 		if collision:

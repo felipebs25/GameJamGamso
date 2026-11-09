@@ -1,6 +1,6 @@
 extends Node2D
 
-const VINE_HOLD_TIME := 1
+const VINE_HOLD_TIME := 2
 const DROP_STEPS := 20
 const SHAKE_STEPS := 2
 const DROP_STEP_DELAY := 0.1
