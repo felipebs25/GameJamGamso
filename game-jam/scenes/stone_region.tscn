@@ -1,0 +1,352 @@
+[gd_scene format=3 uid="uid://bualfsmqblhkx"]
+
+[ext_resource type="Script" uid="uid://b6e0fc22sr7gq" path="res://scenes/stone_region.gd" id="1_kiy2d"]
+[ext_resource type="AudioStream" uid="uid://bwko8cd28iuth" path="res://sounds/pedra.mp3" id="2_qo6oh"]
+[ext_resource type="Texture2D" uid="uid://b0xvvp7kl4c8t" path="res://Cainda_Pedra.png" id="3_q504x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rot5g"]
+size = Vector2(57, 60)
+
+[node name="Stone_region" type="Node2D" unique_id=692288630]
+script = ExtResource("1_kiy2d")
+
+[node name="pedra" type="AudioStreamPlayer" parent="." unique_id=729165089]
+stream = ExtResource("2_qo6oh")
+volume_db = -4.09
+
+[node name="Stone" type="CharacterBody2D" parent="." unique_id=698568001 groups=["stones"]]
+position = Vector2(118, -32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone" unique_id=2074167976]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone" unique_id=1266611812]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone2" type="CharacterBody2D" parent="." unique_id=49433578 groups=["stones"]]
+position = Vector2(59, -117)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone2" unique_id=209938008]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone2" unique_id=831863955]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone3" type="CharacterBody2D" parent="." unique_id=1015042059 groups=["stones"]]
+position = Vector2(201, -113)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone3" unique_id=338534591]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone3" unique_id=1076623664]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone4" type="CharacterBody2D" parent="." unique_id=172587595 groups=["stones"]]
+position = Vector2(247, -32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone4" unique_id=606510978]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone4" unique_id=1604262316]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone5" type="CharacterBody2D" parent="." unique_id=2125692553 groups=["stones"]]
+position = Vector2(362, -388)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone5" unique_id=1191776871]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone5" unique_id=1491551426]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone6" type="CharacterBody2D" parent="." unique_id=1103463085 groups=["stones"]]
+position = Vector2(572, -457)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone6" unique_id=1700395761]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone6" unique_id=2082250584]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone7" type="CharacterBody2D" parent="." unique_id=970368087 groups=["stones"]]
+position = Vector2(475, -605)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone7" unique_id=1350416327]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone7" unique_id=593662009]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone8" type="CharacterBody2D" parent="." unique_id=149650710 groups=["stones"]]
+position = Vector2(1003, -474)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone8" unique_id=370567207]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone8" unique_id=389358941]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone9" type="CharacterBody2D" parent="." unique_id=548521382 groups=["stones"]]
+position = Vector2(619, -103)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone9" unique_id=1381214447]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone9" unique_id=220365511]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone10" type="CharacterBody2D" parent="." unique_id=81929182 groups=["stones"]]
+position = Vector2(807, -460)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone10" unique_id=1380996475]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone10" unique_id=4594428]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone11" type="CharacterBody2D" parent="." unique_id=1258639169 groups=["stones"]]
+visible = false
+position = Vector2(829, -123)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone11" unique_id=2080065112]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone11" unique_id=1493117602]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone12" type="CharacterBody2D" parent="." unique_id=515352145 groups=["stones"]]
+position = Vector2(909, -634)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone12" unique_id=965820740]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone12" unique_id=859324553]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone13" type="CharacterBody2D" parent="." unique_id=774649927 groups=["stones"]]
+position = Vector2(206, -464)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone13" unique_id=1955413360]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone13" unique_id=311905016]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone14" type="CharacterBody2D" parent="." unique_id=1412631818 groups=["stones"]]
+position = Vector2(846, -27)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone14" unique_id=497178176]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone14" unique_id=702445380]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone15" type="CharacterBody2D" parent="." unique_id=349550508 groups=["stones"]]
+position = Vector2(942, -851)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone15" unique_id=1121940017]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone15" unique_id=1336523252]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone16" type="CharacterBody2D" parent="." unique_id=1836421671 groups=["stones"]]
+position = Vector2(300, -668)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone16" unique_id=1088773196]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone16" unique_id=709823034]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone17" type="CharacterBody2D" parent="." unique_id=4274931 groups=["stones"]]
+position = Vector2(27, -463)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone17" unique_id=1188518651]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone17" unique_id=600051208]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone18" type="CharacterBody2D" parent="." unique_id=1648329965 groups=["stones"]]
+position = Vector2(252, -217)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone18" unique_id=1890186330]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone18" unique_id=301056533]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone19" type="CharacterBody2D" parent="." unique_id=358954646 groups=["stones"]]
+position = Vector2(419, -215)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone19" unique_id=253620525]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone19" unique_id=1210313905]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone20" type="CharacterBody2D" parent="." unique_id=343887830 groups=["stones"]]
+position = Vector2(584, -213)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone20" unique_id=78725278]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone20" unique_id=1127940393]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone21" type="CharacterBody2D" parent="." unique_id=170047391 groups=["stones"]]
+position = Vector2(1046, -62)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone21" unique_id=1189533587]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone21" unique_id=1252344976]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone22" type="CharacterBody2D" parent="." unique_id=1370131976 groups=["stones"]]
+position = Vector2(801, -229)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone22" unique_id=1042243875]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone22" unique_id=1224896828]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone23" type="CharacterBody2D" parent="." unique_id=1965066461 groups=["stones"]]
+position = Vector2(678, -250)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone23" unique_id=1665812309]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone23" unique_id=1580815692]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone24" type="CharacterBody2D" parent="." unique_id=149514765 groups=["stones"]]
+position = Vector2(152, -639)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone24" unique_id=123821140]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone24" unique_id=1123759108]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone25" type="CharacterBody2D" parent="." unique_id=1172610803 groups=["stones"]]
+position = Vector2(1032, -196)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone25" unique_id=1777919626]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone25" unique_id=87066130]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone26" type="CharacterBody2D" parent="." unique_id=572843213 groups=["stones"]]
+position = Vector2(398, -912)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone26" unique_id=1728318752]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone26" unique_id=1989598057]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone27" type="CharacterBody2D" parent="." unique_id=1440849639 groups=["stones"]]
+position = Vector2(910, -272)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone27" unique_id=661787333]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone27" unique_id=1814261769]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
+
+[node name="Stone28" type="CharacterBody2D" parent="." unique_id=478751889 groups=["stones"]]
+position = Vector2(659, -608)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone28" unique_id=1031456191]
+shape = SubResource("RectangleShape2D_rot5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone28" unique_id=1270454325]
+texture_filter = 3
+position = Vector2(-1.4305115e-06, -3.000001)
+scale = Vector2(4.6875005, 4.934211)
+texture = ExtResource("3_q504x")
