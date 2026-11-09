@@ -50,6 +50,8 @@ func atrair():
 		return
 	cd = true
 	var direc = (pedraAtual.global_position - player.global_position).normalized()
+	if pedraAtual.global_position.distance_to(player.global_position) >= 200:
+		player.atraindo(direc, false)
 	if pedraAtual.global_position.distance_to(player.global_position) <= 200:
 		player.atraindo(direc, true)
 

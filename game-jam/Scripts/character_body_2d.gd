@@ -54,8 +54,8 @@ func _physics_process(delta: float) -> void:
 			velocity += get_gravity() * delta
 		if atrair:
 			velocity += força_ima * 500 * delta
-			velocity -= get_gravity() * delta * 0.8
-			velocity = velocity.limit_length(300)
+			velocity -= get_gravity() * delta 
+			velocity = velocity.limit_length(600)
 
 		if Input.is_action_just_pressed("ui_space") and is_on_floor():
 			pular()
