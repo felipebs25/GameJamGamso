@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://btccdt3mdjjyj"]
 
-[ext_resource type="Script" uid="uid://bg8ytg2ffasvs" path="res://Scripts/script_pedra.gd" id="1_vx4op"]
+[ext_resource type="Script" uid="uid://bg8ytg2ffasvs" path="res://scripts/script_pedra.gd" id="1_vx4op"]
 
 [sub_resource type="Curve" id="Curve_qg26i"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.075, 0.84269667), 0.0, 0.0, 0, 0, Vector2(0.14, 0.1685394), 0.0, 0.0, 0, 0, Vector2(0.22500001, 0), 0.0, 0.0, 0, 0]
