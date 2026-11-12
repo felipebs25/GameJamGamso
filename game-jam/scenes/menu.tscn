@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://djqkne2ovanxs" path="res://scenes/menu.gd" id="1_vjb58"]
 [ext_resource type="AudioStream" uid="uid://dfr3ueh1u61ho" path="res://assets/menu.mp3" id="1_yqeox"]
 [ext_resource type="AudioStream" uid="uid://hbhib7fp6wh0" path="res://sounds/iniciar.mp3" id="2_con2f"]
+[ext_resource type="Texture2D" uid="uid://bnvmbhf8aau8u" path="res://scenes/Menu.png" id="3_mhnvy"]
 
 [node name="Menu" type="Control" unique_id=1180687197]
 layout_mode = 3
@@ -18,16 +19,18 @@ stream = ExtResource("2_con2f")
 volume_db = 6.89
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=854928730]
+texture_filter = 3
 layout_mode = 0
 offset_right = 1154.0
 offset_bottom = 648.0
+texture = ExtResource("3_mhnvy")
 
 [node name="Button" type="Button" parent="." unique_id=788482575]
 layout_mode = 0
-offset_left = 329.0
-offset_top = 407.0
-offset_right = 824.0
-offset_bottom = 521.0
+offset_left = 747.0
+offset_top = 495.0
+offset_right = 1112.0
+offset_bottom = 603.0
 theme_override_font_sizes/font_size = 55
 text = "Jogar"
 

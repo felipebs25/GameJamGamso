@@ -9,7 +9,7 @@ const JUMP_VELOCITY = -350.0
 @onready var camera_2d: Camera2D = $Camera2D
 @onready var footstep: AudioStreamPlayer = $footstep
 var pegando_pedra := false
-@onready var script_pedra: Node = $"../../ScriptPedra/CharacterBody2D"
+#@onready var script_pedra: Node = $"../../ScriptPedra/CharacterBody2D"
 
 
 var is_using_vine: bool = false
@@ -59,8 +59,11 @@ func _physics_process(delta: float) -> void:
 
 		if Input.is_action_just_pressed("ui_space") and is_on_floor():
 			pular()
-
-		if horizontal_direction and not atrair and not dashing:
+		if dashing and is_on_floor():
+				dashing = false
+		if horizontal_direction and not atrair and dashing and not is_on_floor():
+			velocity.x = horizontal_direction * velocity.x
+		elif horizontal_direction and not atrair and not dashing:
 			velocity.x = horizontal_direction * SPEED
 		elif not dashing and not atrair:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
@@ -93,9 +96,7 @@ func ativarDash(direc):
 	magneto.play()
 	dashing = true
 	if not is_on_floor():
-		velocity = direc * 400
-	await get_tree().create_timer(0.6).timeout
-	dashing = false
+		velocity = direc * 500
 
 func tocar(nome: String) -> void:
 	if sprite_2d.animation != nome:

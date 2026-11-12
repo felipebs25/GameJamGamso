@@ -1,10 +1,10 @@
 extends Node2D
 
-const VINE_HOLD_TIME := 2
+const VINE_HOLD_TIME := 4
 const DROP_STEPS := 20
 const SHAKE_STEPS := 2
 const DROP_STEP_DELAY := 0.1
-const VINE_RESPAWN_TIME := 3.0   # segundos até a vinha voltar
+const VINE_RESPAWN_TIME := 2.0   # segundos até a vinha voltar
 const VINE_START_POS := Vector2i(0, 4)
 
 @onready var vine_sound: AudioStreamPlayer = $vine

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cosskhb8njgug"]
+
+[ext_resource type="Script" uid="uid://c6c7ov1x0myla" path="res://scenes/inicio.gd" id="1_4vxdk"]
+[ext_resource type="Texture2D" uid="uid://bgmvlwce3otpa" path="res://scenes/asdadwasd.png" id="1_i3824"]
+
+[node name="Inicio" type="Control" unique_id=724292105]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4vxdk")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=543950168]
+texture_filter = 3
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_i3824")

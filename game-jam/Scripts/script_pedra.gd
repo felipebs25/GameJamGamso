@@ -14,11 +14,12 @@ var Atração = false
 var pedraAtual
 var d = false
 var cd = false
-
+var podeAtrair = true
 func _process(delta: float) -> void:
 	if Atração:
 		if Input.is_action_pressed("M1"):
-			atrair()
+			if podeAtrair:
+				atrair()
 		if Input.is_action_pressed("M2"):
 			puxarPedra()
 			
@@ -78,7 +79,7 @@ func trajetoria():
 		line_2d.add_point(map.to_local(next_pos))
 		pos = next_pos
 
-func jogarPedra(event, valor):
+func jogarPedra(_event, valor):
 
 	var pedra = Pedra.instantiate()
 	map.add_child(pedra)
@@ -97,6 +98,8 @@ func puxarPedra():
 		return
 	if cd == true:
 		return
+	cd = true
+	podeAtrair = false
 	var direc = (pedraAtual.global_position - player.global_position).normalized()
 	player.ativarDash(direc)
 	pedraAtual.puxar(player)
@@ -108,11 +111,13 @@ func apagarPedra(Pbody):
 	if d == false:
 		d = true
 		while true:
-			if Pbody.global_position.distance_to(player.global_position) <= 90.0:
+			if Pbody.global_position.distance_to(player.global_position) <= 40.0:
+				podeAtrair = true
+				cd = false
 				pedraAtual.queue_free()
 				pedraAtual = null
 				Atração = false
 				d = false
 				break
-			await get_tree().create_timer(0.1).timeout
+			await get_tree().create_timer(0.01).timeout
 	
